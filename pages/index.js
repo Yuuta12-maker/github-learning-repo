@@ -1,68 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 export default function Home() {
   const router = useRouter();
-  
-  // スクロールアニメーション用の効果
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollElements = document.querySelectorAll('.scroll-reveal');
-      
-      const elementInView = (el, scrollOffset = 100) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return elementTop <= window.innerHeight - scrollOffset;
-      };
-      
-      scrollElements.forEach((el) => {
-        if (elementInView(el)) {
-          el.classList.add('revealed');
-        }
-      });
-
-      // ナビゲーションのスクロール効果
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 10) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-
-      // トップに戻るボタン
-      const backToTop = document.querySelector('.back-to-top');
-      if (backToTop) {
-        if (window.scrollY > 500) {
-          backToTop.classList.add('visible');
-        } else {
-          backToTop.classList.remove('visible');
-        }
-      }
-    };
-
-    // ページ読み込み時にローディングを非表示
-    const loading = document.querySelector('.loading');
-    if (loading) {
-      setTimeout(() => {
-        loading.classList.add('hidden');
-      }, 500);
-    }
-    
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // 初期チェック
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // トップに戻る関数
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
   
   return (
     <>
@@ -76,7 +16,8 @@ export default function Home() {
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title animate fadeIn">
-              <span>マインド</span>エンジニアリング<br/>コーチングで<span>変化</span>を創る
+              <span>マインド</span>
+              変化
             </h1>
             <p className="hero-description animate fadeIn delay-200">
               内部表現を操作し、認識と行動を変化させる革新的なコーチング手法で、あなたの無限の可能性を引き出します
@@ -225,7 +166,7 @@ export default function Home() {
       </section>
       
       {/* トップに戻るボタン */}
-      <div className="back-to-top" onClick={scrollToTop}>
+      <div className="back-to-top">
         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
           <line x1="12" y1="19" x2="12" y2="5"></line>
           <polyline points="5 12 12 5 19 12"></polyline>

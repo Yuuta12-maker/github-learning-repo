@@ -72,10 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-});
-
-// ページ遷移アニメーション
-const transitionElements = document.querySelectorAll('.page-transition');
-transitionElements.forEach(el => {
-  el.classList.add('active-page');
+  
+  // ページ遷移アニメーション
+  const pageTransitionElements = document.querySelectorAll('.page-transition');
+  pageTransitionElements.forEach(el => {
+    el.classList.add('active-page');
+  });
 });

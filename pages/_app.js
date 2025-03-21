@@ -12,8 +12,11 @@ function MyApp({ Component, pageProps }) {
     document.body.appendChild(script);
 
     return () => {
-      // クリーンアップ
-      document.body.removeChild(script);
+      // クリーンアップ - スクリプトが複数回追加されないようにする
+      const oldScript = document.querySelector('script[src="/js/main.js"]');
+      if (oldScript && oldScript.parentNode) {
+        oldScript.parentNode.removeChild(oldScript);
+      }
     };
   }, []);
 

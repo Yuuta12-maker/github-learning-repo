@@ -38,11 +38,10 @@ export default function Layout({ children, title }) {
         <div className="container">
           <div className="logo">
             <Link href="/">
-              <img src="/logo.svg" alt="マインドエンジニアリング・コーチング" width="200" height="50" />
+              <img src="/logo.png" alt="マインドエンジニアリング・コーチング" width="200" height="50" />
             </Link>
           </div>
           <div className="header-content">
-            <h1>マインドエンジニアリング・コーチング</h1>
             <p className="subtitle">MEC - 内部表現を操作し、認識と行動を変化させる技術</p>
           </div>
         </div>
@@ -93,7 +92,7 @@ export default function Layout({ children, title }) {
             </li>
             <li>
               <Link href="/case-studies" className={router.pathname === '/case-studies' ? 'active' : ''}>
-                実践例・ケーススタディ
+                実践例
               </Link>
             </li>
           </ul>

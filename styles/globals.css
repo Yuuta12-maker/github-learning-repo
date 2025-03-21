@@ -2,18 +2,20 @@
     --primary-color: #c50502;
     --primary-light: #e41a17;
     --primary-dark: #9c0402;
-    --secondary-color: #292929;
-    --text-color: #2d2d2d;
-    --text-light: #686868;
+    --secondary-color: #222222;
+    --text-color: #222222;
+    --text-light: #555555;
     --bg-color: #ffffff;
-    --bg-alt: #f9f9f9;
+    --bg-alt: #f7f7f7;
     --card-bg: #ffffff;
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     --header-gradient: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     --transition-speed: 0.3s;
     --spacing-unit: 8px;
-    --radius: 12px;
+    --radius: 8px;
     --container-width: 1200px;
+    --font-primary: 'Noto Sans JP', 'Montserrat', sans-serif;
+    --font-secondary: 'Montserrat', 'Noto Sans JP', sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
@@ -46,12 +48,11 @@ body {
 
 /* ヘッダースタイルを現代的にアップデート */
 header {
-    background: var(--bg-color);
-    color: var(--text-color);
-    padding: calc(var(--spacing-unit) * 8) 0;
+    background: var(--secondary-color);
+    color: white;
+    padding: calc(var(--spacing-unit) * 5) 0;
     position: relative;
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header::after {
@@ -125,16 +126,17 @@ header h1::after {
 
 /* モダンなナビゲーション */
 nav {
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: var(--secondary-color);
     padding: 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all var(--transition-speed) ease;
     height: 70px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* モバイルメニュートグル */
@@ -191,22 +193,22 @@ nav li {
 }
 
 nav a {
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-weight: 500;
     padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
-    border-radius: var(--radius);
     transition: all var(--transition-speed) ease;
     display: inline-block;
     position: relative;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
 }
 
 nav a::after {
     content: '';
     position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -1px;
+    left: 0;
     width: 0;
     height: 2px;
     background-color: var(--primary-color);
@@ -215,15 +217,15 @@ nav a::after {
 
 nav a:hover::after,
 nav a.active::after {
-    width: 60%;
+    width: 100%;
 }
 
 nav a:hover {
-    color: var(--primary-color);
+    color: #ffffff;
 }
 
 nav a.active {
-    color: var(--primary-color);
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -478,8 +480,8 @@ footer .container {
     display: inline-block;
     background-color: var(--primary-color);
     color: white;
-    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
-    border-radius: var(--radius);
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+    border-radius: 0;
     text-decoration: none;
     font-weight: 500;
     transition: all var(--transition-speed) ease;
@@ -487,10 +489,13 @@ footer .container {
     cursor: pointer;
     text-align: center;
     margin-top: calc(var(--spacing-unit) * 2);
-    box-shadow: 0 4px 10px rgba(197, 5, 2, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
     z-index: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 .button::before {
@@ -545,14 +550,15 @@ footer .container {
 
 /* ヒーローセクションの追加 */
 .hero-section {
-    padding: calc(var(--spacing-unit) * 12) 0;
-    background: url('/images/hero-bg.svg');
+    padding: calc(var(--spacing-unit) * 16) 0;
+    background: linear-gradient(rgba(34, 34, 34, 0.95), rgba(34, 34, 34, 0.9)), url('/images/hero-bg.svg');
     background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: calc(var(--spacing-unit) * 8);
+    color: white;
 }
 
 .hero-content {
@@ -564,22 +570,30 @@ footer .container {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    margin-bottom: calc(var(--spacing-unit) * 2);
-    color: var(--text-color);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    color: white;
     letter-spacing: -1px;
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .hero-title span {
     color: var(--primary-color);
+    display: block;
+    font-size: 5rem;
 }
 
 .hero-description {
-    font-size: 1.2rem;
-    margin-bottom: calc(var(--spacing-unit) * 4);
+    font-size: 1.3rem;
+    margin-bottom: calc(var(--spacing-unit) * 6);
     opacity: 0.9;
+    font-weight: 300;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
 }
 
 .hero-buttons {
@@ -1138,17 +1152,20 @@ footer .container {
 
 /* CTA セクション */
 .cta-section {
-    padding: calc(var(--spacing-unit) * 8) 0;
+    padding: calc(var(--spacing-unit) * 12) 0;
     text-align: center;
-    background: linear-gradient(rgba(197, 5, 2, 0.02), rgba(197, 5, 2, 0.05));
-    border-radius: var(--radius);
-    margin-bottom: calc(var(--spacing-unit) * 6);
+    background: var(--secondary-color);
+    color: white;
+    margin-bottom: 0;
 }
 
 .cta-title {
-    font-size: 2.2rem;
-    margin-bottom: calc(var(--spacing-unit) * 2);
-    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .cta-text {
