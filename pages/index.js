@@ -1,8 +1,18 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 export default function Home() {
   const router = useRouter();
+  
+  // ローディングを強制的に非表示にする
+  useEffect(() => {
+    const loading = document.querySelector('.loading');
+    if (loading) {
+      // 即時非表示
+      loading.classList.add('hidden');
+    }
+  }, []);
   
   return (
     <>

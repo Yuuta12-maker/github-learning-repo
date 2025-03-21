@@ -38,9 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // ページ読み込み時にローディングを非表示
   const loading = document.querySelector('.loading');
   if (loading) {
-    setTimeout(() => {
-      loading.classList.add('hidden');
-    }, 500);
+    // 即時非表示
+    loading.classList.add('hidden');
   }
   
   window.addEventListener('scroll', handleScroll);
