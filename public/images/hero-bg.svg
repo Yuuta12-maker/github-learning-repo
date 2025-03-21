@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <!-- 背景グラデーション -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f5f5" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    
+    <!-- 赤色のアクセントパターン用グラデーション -->
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c50502" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#e41a17" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- 抽象的な形状パターン -->
+  <g opacity="0.05">
+    <circle cx="100" cy="100" r="80" fill="#000" />
+    <circle cx="1100" cy="500" r="120" fill="#000" />
+    <circle cx="600" cy="50" r="40" fill="#000" />
+    <circle cx="250" cy="450" r="60" fill="#000" />
+    <circle cx="900" cy="150" r="90" fill="#000" />
+    <circle cx="400" cy="300" r="70" fill="#000" />
+    <circle cx="800" cy="400" r="50" fill="#000" />
+  </g>
+  
+  <!-- 赤色のアクセントパターン -->
+  <g opacity="0.15">
+    <!-- 波形 -->
+    <path d="M0,150 Q300,100 600,150 T1200,100" stroke="url(#accent-gradient)" stroke-width="4" fill="none" />
+    <path d="M0,300 Q300,350 600,300 T1200,350" stroke="url(#accent-gradient)" stroke-width="3" fill="none" />
+    <path d="M0,450 Q300,400 600,450 T1200,400" stroke="url(#accent-gradient)" stroke-width="5" fill="none" />
+    
+    <!-- 右上のアクセント -->
+    <path d="M900,0 L1200,0 L1200,300 Z" fill="url(#accent-gradient)" opacity="0.1" />
+    
+    <!-- 左下のアクセント -->
+    <path d="M0,400 L0,600 L300,600 Z" fill="url(#accent-gradient)" opacity="0.1" />
+  </g>
+  
+  <!-- 幾何学模様 -->
+  <g stroke="#c50502" stroke-width="1" opacity="0.1">
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+    <line x1="900" y1="0" x2="900" y2="600" />
+    <line x1="1100" y1="0" x2="1100" y2="600" />
+    
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+  </g>
+  
+  <!-- ハイライト効果 -->
+  <circle cx="900" cy="100" r="50" fill="#c50502" opacity="0.05" />
+  <circle cx="200" cy="400" r="70" fill="#c50502" opacity="0.05" />
+</svg>

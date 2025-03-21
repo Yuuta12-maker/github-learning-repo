@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c50502" />
+      <stop offset="100%" stop-color="#e41a17" />
+    </linearGradient>
+  </defs>
+  
+  <!-- MEC文字 -->
+  <g fill="url(#logo-gradient)" font-family="Montserrat, sans-serif" font-weight="bold">
+    <path d="M10,10 L15,10 L20,30 L25,10 L30,10 L30,40 L25,40 L25,20 L22,34 L18,34 L15,20 L15,40 L10,40 Z" />
+    <path d="M40,10 L65,10 L65,15 L60,15 L60,40 L55,40 L55,15 L40,15 Z" />
+    <path d="M75,10 L95,10 C99,10 102,13 102,17 L102,33 C102,37 99,40 95,40 L75,40 L75,10 Z M80,15 L80,35 L92,35 C94,35 97,34 97,31 L97,19 C97,16 94,15 92,15 L80,15 Z" />
+  </g>
+  
+  <!-- コーチング文字 -->
+  <text x="110" y="25" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2d2d2d" font-weight="300">コーチング</text>
+</svg>

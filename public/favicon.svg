@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 背景円 -->
+  <circle cx="32" cy="32" r="30" fill="#ffffff" />
+  <circle cx="32" cy="32" r="28" fill="#c50502" />
+  
+  <!-- MEC文字 -->
+  <g fill="#ffffff" font-family="Montserrat, sans-serif" font-weight="bold">
+    <path d="M14,24 L17,24 L20,34 L23,24 L26,24 L26,40 L23,40 L23,29 L20,38 L20,38 L17,29 L17,40 L14,40 Z" />
+    <path d="M29,24 L41,24 L41,27 L38,27 L38,40 L35,40 L35,27 L29,27 Z" />
+    <path d="M43,24 L53,24 C55,24 56,25 56,27 L56,37 C56,39 55,40 53,40 L43,40 L43,24 Z M46,27 L46,37 L50,37 C51,37 52,37 52,36 L52,28 C52,27 51,27 50,27 L46,27 Z" />
+  </g>
+</svg>
